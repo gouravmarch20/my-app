@@ -1,0 +1,33 @@
+.homepage {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.more-quiz {
+  min-width: 30vw;
+  min-height: 33vh;
+  border: 1px dashed blue;
+  margin: 1rem;
+}
+.more-quiz:hover {
+  transform: translateY(-1vmax);
+  box-shadow: 2px 4px 8px blueviolet;
+
+  transition: all 0.4s;
+}
+.image--responsive {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.quiz-description {
+  width: 80%;
+  margin: 1rem auto;
+  font-weight: 700;
+  color: var(--color-text-content);
+  font-size: 1.7rem;
+  font-family: sans-serif;
+}

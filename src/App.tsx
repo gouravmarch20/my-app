@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+import "./App.css";
+import { Navbar, NotFound, ValidateCategoryRoute } from "./components";
+import {
+  HomePage,
+  QuestionPage,
+  RulesPage,
+  AnswerPage,
+  MyScorePage,
+} from "./pages";
+import {
+  ROUTE_ROOT,
+  ROUTE_QUIZ_RULES,
+  ROUTE_QUIZ_MYSCORE,
+  ROUTE_QUIZ_ANSWERS,
+  ROUTE_QUIZ_QUESTION,
+  ROUTE_QUIZ_LEADERBORD,
+} from "./utils/constants/routes";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+
+      <Routes>
+        <Route path={ROUTE_ROOT} element={<HomePage />} />
+
+        <Route element={<ValidateCategoryRoute />}>
+          <Route path={ROUTE_QUIZ_RULES} element={<RulesPage />} />
+
+          <Route path={ROUTE_QUIZ_ANSWERS} element={<AnswerPage />} />
+          <Route path={ROUTE_QUIZ_MYSCORE} element={<MyScorePage />} />
+
+          <Route
+            path={`${ROUTE_QUIZ_QUESTION}/:questionNumber`}
+            element={<QuestionPage />}
+          />
+        </Route>
+
+        <Route
+          path="*"
+          element={
+            <NotFound documentTitle="Page not found " textToShow="Page " />
+          }
+        />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

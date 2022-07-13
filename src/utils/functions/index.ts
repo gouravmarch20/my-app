@@ -1,0 +1,1 @@
+export { isValidateCategory } from "./isValidateCategory";
