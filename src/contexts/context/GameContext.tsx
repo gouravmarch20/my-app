@@ -9,6 +9,7 @@ const initialState = {
   currentQuestionIndex: 0,
   selectedOptions: [],
   error: "",
+  quizCategory: "",
 };
 const GameContext = createContext({} as GameContextType);
 const GameProvider: React.FC<{ children: React.ReactNode }> = ({

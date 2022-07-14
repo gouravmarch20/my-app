@@ -1,4 +1,8 @@
-// import { v4 as uuid } from "uuid";
+import {
+  CATEGORY_AVENGERS,
+  CATEGORY_JAVASCRIPT,
+  CATEGORY_STOCK,
+} from "../../utils";
 type OptionType = {
   _id: number;
   option: string;
@@ -25,8 +29,8 @@ type CategoryType = {
   };
 };
 type QuestionsDataType = {
-  ["101"]: CategoryType;
-  ["102"]: CategoryType;
-  ["103"]: CategoryType;
+  [CATEGORY_JAVASCRIPT]: CategoryType;
+  [CATEGORY_AVENGERS]: CategoryType;
+  [CATEGORY_STOCK]: CategoryType;
 };
-export type {QuestionsDataType}
+export type { QuestionsDataType };

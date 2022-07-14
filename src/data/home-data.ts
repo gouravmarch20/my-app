@@ -1,5 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
-import { QUIZ_101 } from "../utils/constants";
+import {
+  CATEGORY_STOCK,
+  CATEGORY_AVENGERS,
+  CATEGORY_JAVASCRIPT,
+} from "../utils";
 type ImageType = {
   altText: string;
   src: string;
@@ -28,7 +32,7 @@ export const HomeData: HomeDataType = {
         src: "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/07/what-is-javascript.jpg",
       },
 
-      categoryName: QUIZ_101,
+      categoryName: CATEGORY_JAVASCRIPT,
       description: "Play this quiz 101",
     },
     {

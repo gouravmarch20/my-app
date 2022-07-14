@@ -1,7 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParamsCategory } from "../../custom-hooks";
+import { ROUTE_QUIZ_QUESTION } from "../../utils/constants/routes";
+
 import "./rulesPage.css";
 export const RulesPage = () => {
+  const { category } = useSearchParamsCategory();
   const navigate = useNavigate();
 
   return (
@@ -16,7 +20,7 @@ export const RulesPage = () => {
             10 marks for every corect answer
           </li>
           <li className="rules-content list-display-circle">
-             2 negative marks for ever worng answer{" "}
+            2 negative marks for ever worng answer{" "}
           </li>
           <li className="rules-content list-display-circle">
             No skip option available{" "}
@@ -24,12 +28,23 @@ export const RulesPage = () => {
         </ul>
 
         <div className="mb-10">
-          <button
-            className="btn btn-success btn-full"
-            onClick={() => navigate("/quiz")}
-          >
-            Play Now
-          </button>
+          {category ? (
+            <button
+              className="btn btn-success btn-full"
+              onClick={() => {
+                navigate(`${ROUTE_QUIZ_QUESTION}/one?category=${category}`);
+              }}
+            >
+              Play Now
+            </button>
+          ) : (
+            <button
+              className="btn btn-success btn-full"
+              onClick={() => navigate("/")}
+            >
+              Select Category
+            </button>
+          )}
         </div>
       </div>
     </section>

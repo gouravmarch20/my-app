@@ -21,6 +21,7 @@ type GameStateType = {
   currentQuestionIndex: number;
   selectedOptions: number[];
   error: string;
+  quizCategory: string;
 };
 
 type GameLoadingAction = {
@@ -59,6 +60,12 @@ type GameErrorAction = {
 type QuizResetAction = {
   type: "RESET_QUIZ";
 };
+type SET_CATEGORY = {
+  type: "SET_CATEGORY";
+  payload: {
+    categoryName: string;
+  };
+};
 
 type GameActionType =
   | GameLoadingAction
@@ -66,7 +73,8 @@ type GameActionType =
   | SetCurrentQuestionIndexAction
   | SetSelectedOptionsAction
   | GameErrorAction
-  | QuizResetAction;
+  | QuizResetAction
+  | SET_CATEGORY;
 
 type GameContextType = {
   state: GameStateType;

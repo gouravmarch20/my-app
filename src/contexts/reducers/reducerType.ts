@@ -1,8 +1,5 @@
-export const AUTH_LOADING = "AUTH_LOADING";
-export const SAVE_AUTH_DATA = "SAVE_AUTH_DATA";
-export const SAVE_USER_DATA = "SAVE_USER_DATA";
-export const AUTH_ERROR = "AUTH_ERROR";
-export const LOG_OUT = "LOG_OUT";
+export const SET_CATEGORY = "SET_CATEGORY";
+
 export const QUIZ_DATA_LOADING = "QUIZ_DATA_LOADING";
 export const SAVE_QUIZ_DATA = "SAVE_QUIZ_DATA";
 export const QUIZ_DATA_ERROR = "QUIZ_DATA_ERROR";

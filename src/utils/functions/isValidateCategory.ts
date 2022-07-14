@@ -1,7 +1,13 @@
-import { QUIZ_101, QUIZ_102, QUIZ_103 } from "../constants";
-const quizCategoryList = [QUIZ_101, QUIZ_102, QUIZ_103];
-console.log("isValidateCategory");
+import {
+  CATEGORY_STOCK,
+  CATEGORY_AVENGERS,
+  CATEGORY_JAVASCRIPT,
+} from "../index";
+const quizCategoryList = [
+  CATEGORY_STOCK,
+  CATEGORY_AVENGERS,
+  CATEGORY_JAVASCRIPT,
+];
 export const isValidateCategory = (categoryName: string): boolean => {
-  console.log(categoryName)
   return quizCategoryList.includes(categoryName);
 };

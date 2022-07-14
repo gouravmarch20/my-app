@@ -1,4 +1,4 @@
-export const QUIZ_101 = "javascript";
-export const QUIZ_102 = "QUIZ_102";
-export const QUIZ_103 = "QUIZ_103";
+export const CATEGORY_STOCK = "stock-market";
+export const CATEGORY_AVENGERS = "avengers";
+export const CATEGORY_JAVASCRIPT = "javascript";
 

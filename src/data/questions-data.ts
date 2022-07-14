@@ -1,6 +1,12 @@
 import { QuestionsDataType } from "../contexts/types";
+import {
+  CATEGORY_JAVASCRIPT,
+  CATEGORY_AVENGERS,
+  CATEGORY_STOCK,
+} from "../utils";
+
 export const QuestionsData: QuestionsDataType = {
-  ["101"]: {
+  [CATEGORY_JAVASCRIPT]: {
     name: "101",
     questions: {
       one: {
@@ -77,7 +83,7 @@ export const QuestionsData: QuestionsDataType = {
       },
     },
   },
-  ["102"]: {
+  [CATEGORY_AVENGERS]: {
     name: "101",
     questions: {
       one: {
@@ -154,7 +160,7 @@ export const QuestionsData: QuestionsDataType = {
       },
     },
   },
-  ["103"]: {
+  [CATEGORY_STOCK]: {
     name: "101",
     questions: {
       one: {

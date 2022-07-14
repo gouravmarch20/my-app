@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar, NotFound, ValidateCategoryRoute } from "./components";
 import {
@@ -16,7 +16,7 @@ import {
   ROUTE_QUIZ_MYSCORE,
   ROUTE_QUIZ_ANSWERS,
   ROUTE_QUIZ_QUESTION,
-  ROUTE_QUIZ_LEADERBORD,
+  
 } from "./utils/constants/routes";
 const App = () => {
   return (

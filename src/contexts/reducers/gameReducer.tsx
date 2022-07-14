@@ -1,17 +1,19 @@
 import { GameActionType, GameStateType } from "../types/gameContext.types";
 import {
-  GAME_ERROR,
   GAME_LOADING,
   SAVE_QUESTIONS,
   SET_CURRENT_QUESTION_INDEX,
   SET_SELECTED_OPTIONS,
   RESET_QUIZ,
+  SET_CATEGORY,
 } from "./reducerType";
 
 export const gameReducer = (state: GameStateType, action: GameActionType) => {
   switch (action.type) {
     case GAME_LOADING:
       return { ...state, loading: true, error: "" };
+    case SET_CATEGORY:
+      return { ...state, quizCategory: action.payload.categoryName };
     case SAVE_QUESTIONS:
       return {
         ...state,
