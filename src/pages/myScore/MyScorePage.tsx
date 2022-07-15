@@ -9,7 +9,7 @@ export const MyScorePage = () => {
     state: { selectedAnswer },
   } = useGame();
   const navigate = useNavigate();
-
+  console.log(selectedAnswer);
   const totalScore = getTotalScore(selectedAnswer);
 
   // const [categoryName, setCategoryName] = useState(useSearchParamsCategory());
@@ -18,6 +18,7 @@ export const MyScorePage = () => {
   return (
     <div>
       MyScorePage
+      <h1> ff{totalScore}</h1>
       <button
         onClick={() => navigate(`${ROUTE_QUIZ_ANSWERS}`)}
         // onClick={() =>

@@ -1,7 +1,18 @@
+type SelectedAnswerValueType = {
+  value: string;
+  score: number;
+};
+type SelectedAnswerType = {
+  one: SelectedAnswerValueType;
+  two: SelectedAnswerValueType;
+  four: SelectedAnswerValueType;
+  five: SelectedAnswerValueType;
+  three: SelectedAnswerValueType;
+};
 type GameStateType = {
   loading: boolean;
   quizTitle: string;
-  selectedAnswer: {};
+  selectedAnswer: SelectedAnswerType;
   // questions: DocumentData;
   currentQuestionIndex: number;
   selectedOptions: number[];

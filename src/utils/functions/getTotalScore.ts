@@ -7,12 +7,9 @@ type AnswersType = {
   three: AnswerType;
 };
 export const getTotalScore = (selectedAnswer: AnswersType): number => {
-  console.log(selectedAnswer);
-
-  //   console.log(Object.keys(answers));
-  //   Object.keys(answers).reduce((totalScore, questionNumber) => {
-  //     console.log(questionNumber);
-  //   });
-  return 1;
-  //
+  return Object.keys(selectedAnswer).reduce(
+    (totalScore, questionNumber) =>
+      selectedAnswer[questionNumber].score + totalScore,
+    0
+  );
 };
