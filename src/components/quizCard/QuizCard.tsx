@@ -3,7 +3,7 @@ import "./QuizCard.css";
 import { Navigate, useNavigate } from "react-router-dom";
 import { HomeData } from "../../data";
 import { ROUTE_QUIZ_RULES } from "../../utils/constants/routes";
-import { SET_CATEGORY } from "../../contexts/actions-type";
+// import { SET_CATEGORY } from "../../contexts/actions-type";
 import { useGame } from "../../contexts/context/GameContext";
 export const QuizCard = () => {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
-
 type GameStateType = {
   loading: boolean;
   quizTitle: string;
+  selectedAnswer: {};
   // questions: DocumentData;
   currentQuestionIndex: number;
   selectedOptions: number[];
@@ -44,6 +44,16 @@ type GameErrorAction = {
 type QuizResetAction = {
   type: "RESET_QUIZ";
 };
+type SetAnswerAction = {
+  type: "SET_ANSWER";
+  payload: {
+    answer: {
+      key: string;
+      score: number;
+      value: string;
+    };
+  };
+};
 
 type GameActionType =
   | GameLoadingAction
@@ -51,7 +61,8 @@ type GameActionType =
   | SetCurrentQuestionIndexAction
   | SetSelectedOptionsAction
   | GameErrorAction
-  | QuizResetAction;
+  | QuizResetAction
+  | SetAnswerAction;
 
 type GameContextType = {
   state: GameStateType;

@@ -1,12 +1,17 @@
 import { ROUTE_QUIZ_QUESTION } from "../../utils/constants/routes";
 import React, { useEffect, useState } from "react";
-import { ACTION_TYPE_SET_SELECTED_OPTIONS } from "../../contexts/actions-type";
+// import { ACTION_TYPE_SET_SELECTED_OPTIONS } from "../../contexts/actions-type";
 import { useGame } from "../../contexts/context/GameContext";
 type QnaOptionPropsType = {
   options: [];
   category: string;
+  handleChange: (option: string) => void;
 };
-export const QnaOption = ({ options, category }: QnaOptionPropsType) => {
+export const QnaOption = ({
+  options,
+  category,
+  handleChange,
+}: QnaOptionPropsType) => {
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(-1);
   // const { state, dispatch } = useGame();
 
@@ -36,7 +41,11 @@ export const QnaOption = ({ options, category }: QnaOptionPropsType) => {
           return (
             <div
               key={_id}
-              onClick={() => optionBtnHandler(index)}
+           
+              onClick={() => {
+                optionBtnHandler(index);
+                handleChange(option);
+              }}
               className="options"
             >
               <div
