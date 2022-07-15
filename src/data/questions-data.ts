@@ -1,4 +1,6 @@
 import { QuestionsDataType } from "../contexts/types";
+import { v4 as uuidv4 } from "uuid";
+
 import {
   CATEGORY_JAVASCRIPT,
   CATEGORY_AVENGERS,
@@ -17,10 +19,10 @@ export const QuestionsData: QuestionsDataType = {
           prev: "rules",
         },
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
-          { _id: 23, option: "Fourth" },
-          { _id: 3, option: "Second" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -28,13 +30,15 @@ export const QuestionsData: QuestionsDataType = {
       two: {
         number: 1,
         link: {
-          next: "two",
+          next: "three",
           prev: "rules",
         },
         answer: "Shamballa",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -47,36 +51,42 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
-          "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
+          " War was which number movie in Marvel's Avengers series ?",
       },
       four: {
         number: 1,
         link: {
-          next: "four",
+          next: "five",
           prev: "two",
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
-          "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
+          " was which number movie in Marvel's Avengers series ?",
       },
       five: {
         number: 1,
         link: {
-          next: "four",
-          prev: "two",
+          next: "result",
+          prev: "four",
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -94,10 +104,10 @@ export const QuestionsData: QuestionsDataType = {
           prev: "rules",
         },
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
-          { _id: 23, option: "Fourth" },
-          { _id: 3, option: "Second" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -110,8 +120,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "Shamballa",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -124,8 +136,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -138,8 +152,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -152,8 +168,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -171,10 +189,10 @@ export const QuestionsData: QuestionsDataType = {
           prev: "rules",
         },
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
-          { _id: 23, option: "Fourth" },
-          { _id: 3, option: "Second" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -187,8 +205,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "Shamballa",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -201,8 +221,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -215,8 +237,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
@@ -229,8 +253,10 @@ export const QuestionsData: QuestionsDataType = {
         },
         answer: "sim",
         options: [
-          { _id: 4, option: "Dormammu" },
-          { _id: 43, option: "Shamballa" },
+          { _id: uuidv4(), option: "Dormammu" },
+          { _id: uuidv4(), option: "Shamballa" },
+          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "Second" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",

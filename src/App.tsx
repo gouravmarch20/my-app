@@ -16,7 +16,6 @@ import {
   ROUTE_QUIZ_MYSCORE,
   ROUTE_QUIZ_ANSWERS,
   ROUTE_QUIZ_QUESTION,
-  
 } from "./utils/constants/routes";
 const App = () => {
   return (
@@ -25,11 +24,11 @@ const App = () => {
 
       <Routes>
         <Route path={ROUTE_ROOT} element={<HomePage />} />
+        <Route path={ROUTE_QUIZ_ANSWERS} element={<AnswerPage />} />
         <Route path={ROUTE_RULES} element={<RulesPage />} />
 
         <Route element={<ValidateCategoryRoute />}>
           <Route path={ROUTE_QUIZ_RULES} element={<RulesPage />} />
-          <Route path={ROUTE_QUIZ_ANSWERS} element={<AnswerPage />} />
           <Route path={ROUTE_QUIZ_MYSCORE} element={<MyScorePage />} />
 
           <Route

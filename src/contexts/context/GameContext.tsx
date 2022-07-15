@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useReducer } from "react";
-import { gameReducer } from "../reducers";
+
 import { GameContextType } from "../types/gameContext.types";
 
+import { gameReducer } from "../reducers";
 const initialState = {
   loading: false,
   quizTitle: "",
@@ -9,9 +10,9 @@ const initialState = {
   currentQuestionIndex: 0,
   selectedOptions: [],
   error: "",
-  quizCategory: "",
 };
 const GameContext = createContext({} as GameContextType);
+
 const GameProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {

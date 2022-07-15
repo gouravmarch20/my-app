@@ -4,7 +4,7 @@ import {
   CATEGORY_STOCK,
 } from "../../utils";
 type OptionType = {
-  _id: number;
+  _id: string;
   option: string;
 };
 type QuestionType = {

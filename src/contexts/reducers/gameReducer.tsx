@@ -1,19 +1,17 @@
 import { GameActionType, GameStateType } from "../types/gameContext.types";
 import {
+  GAME_ERROR,
   GAME_LOADING,
   SAVE_QUESTIONS,
   SET_CURRENT_QUESTION_INDEX,
   SET_SELECTED_OPTIONS,
   RESET_QUIZ,
-  SET_CATEGORY,
-} from "./reducerType";
+} from "../actions-type";
 
 export const gameReducer = (state: GameStateType, action: GameActionType) => {
   switch (action.type) {
     case GAME_LOADING:
       return { ...state, loading: true, error: "" };
-    case SET_CATEGORY:
-      return { ...state, quizCategory: action.payload.categoryName };
     case SAVE_QUESTIONS:
       return {
         ...state,
@@ -34,20 +32,10 @@ export const gameReducer = (state: GameStateType, action: GameActionType) => {
           action.payload.selectedOptions,
         ],
       };
-    case SET_CURRENT_QUESTION_INDEX:
-      return {
-        ...state,
-        currentQuestionIndex: action.payload.currentQuestionIndex,
-      };
-    // case GAME_ERROR:
-    //   return { ...state, loading: false, error: action.payload.error };
-    case RESET_QUIZ: {
-      return {
-        ...state,
-        currentQuestionIndex: 0,
-        selectedOptions: [],
-      };
-    }
+    case GAME_ERROR:
+      return { ...state, loading: false, error: action.payload.error };
+    case RESET_QUIZ:
+      return { ...state, currentQuestionIndex: 0, selectedOptions: [] };
     default:
       return state;
   }

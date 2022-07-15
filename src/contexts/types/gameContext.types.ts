@@ -1,18 +1,3 @@
-import React from "react";
-type OptionType = {
-  _id: number;
-  option: string;
-};
-type QuestionType = {
-  number: number;
-  answer: string;
-  link: {
-    next: string;
-    prev: string;
-  };
-  options: OptionType[];
-  statement: string;
-};
 
 type GameStateType = {
   loading: boolean;
@@ -21,7 +6,6 @@ type GameStateType = {
   currentQuestionIndex: number;
   selectedOptions: number[];
   error: string;
-  quizCategory: string;
 };
 
 type GameLoadingAction = {
@@ -60,12 +44,6 @@ type GameErrorAction = {
 type QuizResetAction = {
   type: "RESET_QUIZ";
 };
-type SET_CATEGORY = {
-  type: "SET_CATEGORY";
-  payload: {
-    categoryName: string;
-  };
-};
 
 type GameActionType =
   | GameLoadingAction
@@ -73,8 +51,7 @@ type GameActionType =
   | SetCurrentQuestionIndexAction
   | SetSelectedOptionsAction
   | GameErrorAction
-  | QuizResetAction
-  | SET_CATEGORY;
+  | QuizResetAction;
 
 type GameContextType = {
   state: GameStateType;
