@@ -52,7 +52,9 @@ export const gameReducer = (state: GameStateType, action: GameActionType) => {
     case GAME_ERROR:
       return { ...state, loading: false, error: action.payload.error };
     case RESET_QUIZ:
-      return { ...state, currentQuestionIndex: 0, selectedOptions: [] };
+      sessionStorage.clear();
+
+      return { ...state, selectedOptions: [] };
     default:
       return state;
   }

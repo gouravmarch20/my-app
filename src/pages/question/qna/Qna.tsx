@@ -49,6 +49,7 @@ export const Qna = ({ category, questionNumber }: QnaPropType) => {
           handleChange={handleChange}
         />
       </div>
+      {/* TODO: BTN DISABLE */}
       <PrevNextBtn category={category} prev={prev} next={next} />
     </div>
   );
