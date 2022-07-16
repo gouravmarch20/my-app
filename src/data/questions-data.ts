@@ -13,19 +13,18 @@ export const QuestionsData: QuestionsDataType = {
     questions: {
       one: {
         number: 1,
-        answer: "Shamballa",
+        answer: "Golang",
         link: {
           next: "two",
           prev: "rules",
         },
         options: [
-          { _id: uuidv4(), option: "Dormammu" },
-          { _id: uuidv4(), option: "Shamballa" },
-          { _id: uuidv4(), option: "Fourth" },
-          { _id: uuidv4(), option: "Second" },
+          { _id: uuidv4(), option: "Prytronics" },
+          { _id: uuidv4(), option: "Golang" },
+          { _id: uuidv4(), option: "Gotan" },
+          { _id: uuidv4(), option: "Indus OS" },
         ],
-        statement:
-          "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
+        statement: "Which one is a programming language ?",
       },
       two: {
         number: 1,
@@ -33,15 +32,15 @@ export const QuestionsData: QuestionsDataType = {
           next: "three",
           prev: "rules",
         },
-        answer: "Shamballa",
+        answer: "<script>",
         options: [
-          { _id: uuidv4(), option: "Dormammu" },
-          { _id: uuidv4(), option: "Shamballa" },
-          { _id: uuidv4(), option: "Fourth" },
-          { _id: uuidv4(), option: "Second" },
+          { _id: uuidv4(), option: "<sp>" },
+          { _id: uuidv4(), option: "<script>" },
+          { _id: uuidv4(), option: "<p>" },
+          { _id: uuidv4(), option: "<div>" },
         ],
         statement:
-          "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",
+          "Which tag is used to include javascript file ?",
       },
       three: {
         number: 1,
@@ -49,15 +48,14 @@ export const QuestionsData: QuestionsDataType = {
           next: "four",
           prev: "two",
         },
-        answer: "sim",
+        answer: "let",
         options: [
-          { _id: uuidv4(), option: "Dormammu" },
-          { _id: uuidv4(), option: "Shamballa" },
-          { _id: uuidv4(), option: "Fourth" },
-          { _id: uuidv4(), option: "Second" },
+          { _id: uuidv4(), option: "undefined" },
+          { _id: uuidv4(), option: "slice" },
+          { _id: uuidv4(), option: "this" },
+          { _id: uuidv4(), option: "let" },
         ],
-        statement:
-          " War was which number movie in Marvel's Avengers series ?",
+        statement: "Which keywords is used to define varible  ?",
       },
       four: {
         number: 1,
@@ -65,15 +63,14 @@ export const QuestionsData: QuestionsDataType = {
           next: "five",
           prev: "two",
         },
-        answer: "sim",
+        answer: "sal",
         options: [
           { _id: uuidv4(), option: "Dormammu" },
-          { _id: uuidv4(), option: "Shamballa" },
-          { _id: uuidv4(), option: "Fourth" },
+          { _id: uuidv4(), option: "sim" },
+          { _id: uuidv4(), option: "sal" },
           { _id: uuidv4(), option: "Second" },
         ],
-        statement:
-          " was which number movie in Marvel's Avengers series ?",
+        statement: " was which number movie in Marvel's Avengers series ?",
       },
       five: {
         number: 1,
@@ -81,12 +78,12 @@ export const QuestionsData: QuestionsDataType = {
           next: "result",
           prev: "four",
         },
-        answer: "sim",
+        answer: "alpa",
         options: [
           { _id: uuidv4(), option: "Dormammu" },
-          { _id: uuidv4(), option: "Shamballa" },
-          { _id: uuidv4(), option: "Fourth" },
-          { _id: uuidv4(), option: "Second" },
+          { _id: uuidv4(), option: "alpa" },
+          { _id: uuidv4(), option: "hh" },
+          { _id: uuidv4(), option: "hh" },
         ],
         statement:
           "Avengers: Infinity War was which number movie in Marvel's Avengers series ?",

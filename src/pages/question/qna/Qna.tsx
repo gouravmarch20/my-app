@@ -14,7 +14,6 @@ export const Qna = ({ category, questionNumber }: QnaPropType) => {
     dispatch,
     state: { selectedAnswer },
   } = useGame();
-  console.log(QuestionsData);
   const {
     name,
     questions: {
@@ -40,7 +39,6 @@ export const Qna = ({ category, questionNumber }: QnaPropType) => {
       },
     });
   };
-  console.log(options);
   return (
     <div className="question-options">
       <h2 className="question">{statement}</h2>

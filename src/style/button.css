@@ -34,6 +34,12 @@
   color: white;
   font-size: large;
 }
+.btn-success-light {
+  background-color: #1faa59;
+  transition: all 0.7s;
+  color: white;
+  font-size: large;
+}
 .btn-space {
   background-color: var(--color-space);
 }

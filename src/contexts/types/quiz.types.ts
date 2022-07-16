@@ -33,4 +33,4 @@ type QuestionsDataType = {
   [CATEGORY_AVENGERS]: CategoryType;
   [CATEGORY_STOCK]: CategoryType;
 };
-export type { QuestionsDataType };
+export type { QuestionsDataType, OptionType };

@@ -9,21 +9,17 @@ export const MyScorePage = () => {
     state: { selectedAnswer },
   } = useGame();
   const navigate = useNavigate();
-  console.log(selectedAnswer);
   const totalScore = getTotalScore(selectedAnswer);
 
   // const [categoryName, setCategoryName] = useState(useSearchParamsCategory());
-  const categoryName = useSearchParamsCategory();
-  console.log(categoryName);
+  const { category } = useSearchParamsCategory();
   return (
     <div>
       MyScorePage
       <h1> ff{totalScore}</h1>
       <button
-        onClick={() => navigate(`${ROUTE_QUIZ_ANSWERS}`)}
-        // onClick={() =>
-        //   navigate(`${ROUTE_QUIZ_ANSWERS}?category=${categoryName}`)
-        // }
+        // onClick={() => navigate(`${ROUTE_QUIZ_ANSWERS}`)}
+        onClick={() => navigate(`${ROUTE_QUIZ_ANSWERS}?category=${category}`)}
       >
         View Answers{" "}
       </button>
