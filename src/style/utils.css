@@ -25,6 +25,14 @@
   font-size: 1.4rem;
   font-family: serif;
 }
+.content-subheading {
+  width: 80%;
+  margin: 1rem auto;
+
+  color: var(--color-text-subheading);
+  font-size: 1.4rem;
+  font-family: serif;
+}
 /* text size  */
 .text-sm {
   font-size: 1.4rem;
@@ -37,6 +45,9 @@
 }
 .text-lg {
   font-size: 2.5rem;
+}
+.text-xlg {
+  font-size: 3rem;
 }
 .bold-100 {
   font-weight: 100;
@@ -91,6 +102,9 @@
 .ml-10 {
   margin-left: 1rem;
 }
+.p-5 {
+  padding: .5rem;
+}
 .p-10 {
   padding: 1rem;
 }
@@ -105,9 +119,7 @@
 .ml-10h {
   margin-left: 10vh;
 }
-.p-1 {
-  padding: 1rem;
-}
+
 .flex-center-single-item {
   display: flex;
   justify-content: center;

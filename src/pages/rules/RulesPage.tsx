@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSearchParamsCategory } from "../../custom-hooks";
 import { ROUTE_QUIZ_QUESTION } from "../../utils/constants/routes";
 
@@ -20,7 +20,7 @@ export const RulesPage = () => {
             10 marks for every corect answer
           </li>
           <li className="rules-content list-display-circle">
-            2 negative marks for ever worng answer{" "}
+            4 negative marks for ever worng answer{" "}
           </li>
           <li className="rules-content list-display-circle">
             No skip option available{" "}

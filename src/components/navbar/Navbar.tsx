@@ -18,14 +18,14 @@ export const Navbar = () => {
           </div>
 
           <div className="navbar-right">
-            <NavLink
+            {/* <NavLink
               to="./leaderboard"
               className={({ isActive }) =>
                 isActive ? "nav-link-active navbar-link " : "navbar-link "
               }
             >
               leaderboard{" "}
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/rules"
@@ -33,7 +33,7 @@ export const Navbar = () => {
                 isActive ? "nav-link-active navbar-link " : "navbar-link "
               }
             >
-              rules
+              Rules
             </NavLink>
           </div>
         </div>

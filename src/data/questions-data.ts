@@ -27,7 +27,7 @@ export const QuestionsData: QuestionsDataType = {
         statement: "Which one is a programming language ?",
       },
       two: {
-        number: 1,
+        number: 2,
         link: {
           next: "three",
           prev: "rules",
@@ -42,7 +42,7 @@ export const QuestionsData: QuestionsDataType = {
         statement: "Which tag is used to include javascript file ?",
       },
       three: {
-        number: 1,
+        number: 3,
         link: {
           next: "four",
           prev: "two",
@@ -57,7 +57,7 @@ export const QuestionsData: QuestionsDataType = {
         statement: "Which keywords is used to define varible  ?",
       },
       four: {
-        number: 1,
+        number: 4,
         link: {
           next: "five",
           prev: "three",
@@ -72,7 +72,7 @@ export const QuestionsData: QuestionsDataType = {
         statement: "How do you call a function  ?",
       },
       five: {
-        number: 1,
+        number: 5,
         link: {
           next: "result",
           prev: "four",
@@ -107,7 +107,7 @@ export const QuestionsData: QuestionsDataType = {
         statement: "Avengers: Infinity War How many Infinity Stones are there?",
       },
       two: {
-        number: 1,
+        number: 2,
         link: {
           next: "three",
           prev: "rules",
@@ -203,7 +203,7 @@ export const QuestionsData: QuestionsDataType = {
         statement: "Which IT company is acquired by Larsen & Toubro Group.",
       },
       three: {
-        number: 1,
+        number: 3,
         link: {
           next: "four",
           prev: "two",

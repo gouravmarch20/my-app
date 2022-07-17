@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { QuestionsData } from "../../../data";
 import { QnaOption } from "../../../components";
 import { PrevNextBtn } from "../prev-next-btn/PrevNextBtn";
@@ -14,6 +14,7 @@ export const Qna = ({ category, questionNumber }: QnaPropType) => {
     dispatch,
     state: { selectedAnswer },
   } = useGame();
+  const [isSelectedOption, setIsSelectedOption] = useState(false);
   const {
     name,
     questions: {
@@ -47,10 +48,24 @@ export const Qna = ({ category, questionNumber }: QnaPropType) => {
           options={options}
           category={category}
           handleChange={handleChange}
+          setIsSelectedOption={setIsSelectedOption}
+          isSelectedOption={isSelectedOption}
         />
       </div>
-      {/* TODO: BTN DISABLE */}
-      <PrevNextBtn category={category} prev={prev} next={next} />
+
+      <PrevNextBtn
+        category={category}
+        prev={prev}
+        next={next}
+        setIsSelectedOption={setIsSelectedOption}
+        isSelectedOption={isSelectedOption}
+      />
+      <h2 className="subheading">
+        Current question number{" "}
+        <span className="text-green text-lg">
+           {number }
+           </span>
+      </h2>
     </div>
   );
 };

@@ -11,7 +11,7 @@
   --color-text-heading: #000000;
   --color-text-subheading: #2e2e2e;
   --color-text-content: #5c5c5c;
-  --color-text-subheading: #9a9a9a;
+  /* --color-text-subheading: #9a9a9a; */
 
   --color-text-green: #02b290;
   --color-text-blue-heading: #3944f7;
@@ -62,6 +62,7 @@
 
 .text-green {
   color: var(--color-text-green);
+  font-weight: 500;
 }
 .color-text-neon {
   color: var(--color-neon);

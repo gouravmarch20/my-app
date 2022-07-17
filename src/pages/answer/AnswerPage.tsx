@@ -7,37 +7,40 @@ import { useGame } from "../../contexts/context/GameContext";
 import { RESET_QUIZ } from "../../contexts/actions-type";
 import { useNavigate } from "react-router-dom";
 import { ROUTE_ROOT } from "../../utils/constants/routes";
-
+import "./AnswerPage.css";
 export const AnswerPage = () => {
   const navigate = useNavigate();
 
   const [selectedAnswer, setSelectedAnswer] = useState({
     one: {
-      value: "Gotan",
-      score: -4,
+      value: "",
+      score: 0,
     },
     two: {
-      value: "<div>",
-      score: -4,
+      value: "",
+      score: 0,
     },
     four: {
-      value: "sal",
-      score: 10,
+      value: "",
+      score: 0,
     },
     five: {
-      value: "hh",
-      score: -4,
+      value: "",
+      score: 0,
     },
     three: {
-      value: "slice",
-      score: -4,
+      value: "",
+      score: 0,
     },
   });
   useEffect(() => {
-    const { selectedAnswer } = JSON.parse(
+    const selectedAnswer = JSON.parse(
       sessionStorage.getItem(QUIZ_SESSION_STORAGE_KEY)
     );
-    setSelectedAnswer(selectedAnswer);
+    console.log(selectedAnswer);
+    if (selectedAnswer) {
+      setSelectedAnswer(selectedAnswer.selectedAnswer);
+    }
   }, []);
   const { category } = useSearchParamsCategory();
   const { dispatch } = useGame();
@@ -49,14 +52,29 @@ export const AnswerPage = () => {
     navigate(`${ROUTE_ROOT}`);
   };
   return (
-    <div>
-      Answer
-      <h1>Answer key</h1>
+    <div className={"result-page-align-center"}>
+      <h2 className=" heading  mb-10">Answer key</h2>
+      <section className="color-info">
+        <ul className=" ">
+          <li className="content-subheading text-xmd">
+            {" "}
+            <span className=" text-danger"> Red </span> : Wrong Answer{" "}
+          </li>
+          <li className=" content-subheading text-xmd">
+            {" "}
+            <span className="text-info"> Blue : </span> Correct Answer{" "}
+          </li>
+          <li className="content-subheading text-xmd">
+            {" "}
+            <span className="text-green"> Green : </span> You selected right
+            answer{" "}
+          </li>
+        </ul>
+      </section>
       {Object.keys(selectedQuiz.questions).map((question) => {
         return (
-          <div className="result-card" key={question}>
+          <div className="result-card " key={question}>
             <p className="question  text-left m-10">
-            
               {selectedQuiz.questions[question].statement}
             </p>
             <ul>
@@ -94,7 +112,12 @@ export const AnswerPage = () => {
           </div>
         );
       })}
-      <button onClick={() => handleAnswerRedirect()}>Go Home </button>
+      <button
+        className="btn btn-danger-light  btn-width-50"
+        onClick={() => handleAnswerRedirect()}
+      >
+        Go Home{" "}
+      </button>
     </div>
   );
 };
