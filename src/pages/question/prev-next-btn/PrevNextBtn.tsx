@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ROUTE_QUIZ_MYSCORE,
   ROUTE_QUIZ_QUESTION,
@@ -9,8 +9,17 @@ type PrevNextBtnProps = {
   category: string;
   prev: string;
   next: string;
+  setIsSelectedOption: (value: boolean) => void;
+
+  isSelectedOption: boolean;
 };
-export const PrevNextBtn = ({ category, prev, next }: PrevNextBtnProps) => {
+export const PrevNextBtn = ({
+  category,
+  prev,
+  next,
+  setIsSelectedOption,
+  isSelectedOption,
+}: PrevNextBtnProps) => {
   const navigate = useNavigate();
 
   const nextLink =
@@ -19,16 +28,20 @@ export const PrevNextBtn = ({ category, prev, next }: PrevNextBtnProps) => {
       : `${ROUTE_QUIZ_QUESTION}/${next}?category=${category}`;
 
   const nextButtonHandler = () => {
+    setIsSelectedOption(false);
     navigate(nextLink);
   };
   return (
     <div>
-      <button
-        // className={`btn ${selectedOptionIndex === -1 ? "btn-disable" : ""}`}
-        onClick={nextButtonHandler}
-      >
-        Next question{" "}
-      </button>
+      {isSelectedOption ? (
+         <button className={`btn ctn-btn`} onClick={nextButtonHandler}>
+         Next question{" "}
+       </button>
+      ) : (
+        <button className={"btn  ctn-btn btn-disable"} onClick={nextButtonHandler}>
+          Select option
+        </button>
+      )}
     </div>
   );
 };

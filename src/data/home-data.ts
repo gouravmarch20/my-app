@@ -45,7 +45,7 @@ export const HomeData: HomeDataType = {
         src: "https://wallpapers.com/images/featured/avengers%20endgame-mghdp4gaqzu4q4us.jpg",
       },
 
-      categoryName: "quiz 102 ",
+      categoryName: CATEGORY_AVENGERS,
       description: "Play this quiz 102",
     },
     {
@@ -58,7 +58,7 @@ export const HomeData: HomeDataType = {
         src: "https://i.ytimg.com/vi/ZCFkWDdmXG8/maxresdefault.jpg",
       },
 
-      categoryName: "quiz 103 ",
+      categoryName: CATEGORY_STOCK,
       description: "Play this quiz 103 ",
     },
   ],

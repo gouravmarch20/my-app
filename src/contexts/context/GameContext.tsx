@@ -9,6 +9,14 @@ const initialState = {
   questions: [],
   currentQuestionIndex: 0,
   selectedOptions: [],
+  selectedAnswer: {
+    one: { value: "", score: 0 },
+    two: { value: "", score: 0 },
+    four: { value: "", score: 0 },
+    five: { value: "", score: 0 },
+    three: { value: "", score: 0 },
+  },
+
   error: "",
 };
 const GameContext = createContext({} as GameContextType);

@@ -6,7 +6,6 @@ import { isValidateCategory } from "../../utils/functions";
 import { useSearchParamsCategory } from "../../custom-hooks";
 
 export const ValidateCategoryRoute = () => {
-  //FIXME
   let { category } = useSearchParamsCategory();
 
   category = category || "not";

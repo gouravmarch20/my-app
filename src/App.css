@@ -1,5 +1,7 @@
 body {
   background-color: #cad5e2;
   margin: 0;
+  max-width: 100% !important;
+  overflow-x: hidden
 }
 @import url("./style/index.css");
